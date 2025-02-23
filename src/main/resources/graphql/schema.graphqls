@@ -1,0 +1,25 @@
+type Query {
+    findUsersBy(id: String) : [UserDTO]
+}
+
+type Mutation {
+    createUser(userName:String!, password: String!) : User
+}
+
+input UserFilter{
+    id: Int
+    userName: String
+    password: String
+}
+
+type UserDTO {
+    id: Int
+    userName: String
+    password: String
+}
+
+type User {
+    id: Int!
+    userName: String!
+    password: String!
+}
